@@ -1,0 +1,13 @@
+Declare:
+  Bonus Number;
+  Salary Number;
+  Experience Number;
+Begin: 
+  Salary:=230000;
+  Experience:=11;
+  Bonus:=Salary*0.10;
+  If Experience>=10 Then
+  Bonus:=Bonus+2000;
+  End if;
+  dbms_Output.Put_line('Bonus:'||Bonus);
+End;
