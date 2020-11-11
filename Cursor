@@ -1,0 +1,36 @@
+create Table Employee_Info(Emp_ID Varchar2 (15),Emp_Name Varchar2(25),
+Emp_Salary int);
+
+Insert Into Employee_Info Values('H90711','Ishu',90000);
+Insert Into Employee_Info Values('H90721','Roshan',45000);
+Insert Into Employee_Info Values('H90731','Divin',23000);
+Insert Into Employee_Info Values('H90741','Keerthi',59000);
+Insert Into Employee_Info Values('H90751','James',72000);
+Insert Into Employee_Info Values('H90761','Joe',33000);
+Insert Into Employee_Info Values('H90771','Vishnu',10000);
+Insert Into Employee_Info Values('H90781','Sowndarya',340000);
+Insert Into Employee_Info Values('H90791','Akshai',81000);
+Insert Into Employee_Info Values('H90710','Meghana',19000);
+
+create Table Temp(Col1_Emp_ID Varchar2 (15),Col2_Emp_Name Varchar2(15),
+Col3_Emp_Salary int);
+
+
+Declare:
+  Cursor C1 is 
+  Select Emp_ID,Emp_Name,Emp_Salary from Employee_Info
+  Order By Emp_Salary Desc;
+  My_Emp_ID Varchar2 (15);
+  My_Emp_Name Varchar2 (25);
+  My_Emp_Salary Number (8,2);
+Begin:
+  Open C1;
+  For i in 1..5 Loop
+  Fetch C1 into My_Emp_ID,My_Emp_Name,My_Emp_Salary;
+  Exit When C1%NOTFOUND;
+  Insert Into Temp Values(My_Emp_ID,My_Emp_Name,My_Emp_Salary);
+  Commit;
+  End Loop;
+  Close;
+  C1;
+End;
