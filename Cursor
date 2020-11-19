@@ -1,3 +1,4 @@
+
 create Table Employee_Info(Emp_ID Varchar2 (15),Emp_Name Varchar2(25),
 Emp_Salary int);
 
@@ -14,7 +15,6 @@ Insert Into Employee_Info Values('H90710','Meghana',19000);
 
 create Table Temp(Col1_Emp_ID Varchar2 (15),Col2_Emp_Name Varchar2(15),
 Col3_Emp_Salary int);
-
 
 Declare:
   Cursor C1 is 
