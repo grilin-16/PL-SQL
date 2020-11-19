@@ -1,6 +1,6 @@
-DECLARE
+DECLARE:
  greetings varchar2(11):='hello world';
-BEGIN
+BEGIN:
  dbms_output.put_line(UPPER(greetings));
  dbms_output.put_line(LOWER(greetings));
  dbms_output.put_line(INITCAP(greetings));
