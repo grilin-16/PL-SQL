@@ -1,3 +1,4 @@
+
 DECLARE:
  greetings varchar2(11):='hello world';
 BEGIN:
