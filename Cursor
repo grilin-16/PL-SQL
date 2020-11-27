@@ -1,4 +1,3 @@
-
 create Table Employee_Info(Emp_ID Varchar2 (15),Emp_Name Varchar2(25),
 Emp_Salary int);
 
